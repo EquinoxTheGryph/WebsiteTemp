@@ -1,0 +1,230 @@
+head, body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Global */
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Courgette', cursive;
+}
+
+h2, h3 {
+    font-family: 'Baumans', cursive;
+}
+
+a {
+    display: block;
+    color: #aaa;
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #272727;
+    padding: 0 1em;
+}
+
+.navbar-title {
+    color: white;
+    padding: 0 0.5em;
+    flex-grow: 1;
+}
+
+.navbar-link {
+    padding: 1em;
+    color: #ddd;
+}
+
+
+/* Header */
+
+header {
+    background-image: url("img/bg1.jpg");
+    background-size: cover;
+    height: 30em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container {
+    background-color: #272727;
+    width: 20em;
+    margin: 1em;
+    padding: 2em;
+    min-width: 10em;
+}
+
+.header-container h1 {
+    margin-top: 0;
+    color: magenta;
+    font-family: unset;
+}
+
+.header-container p {
+    color: white;
+}
+
+.header-filler {
+    max-width: 33%;
+    flex-grow: 1;
+}
+
+
+/* Reasons */
+
+.reason-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+    background-color: white;
+    padding: 2em 4em;
+}
+
+
+/* Pros/Cons */
+
+.procons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pc-container {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    height: 15em;
+}
+
+.pc-container section {
+    min-width: 10em;
+    height: 10em;
+    padding: 1em;
+}
+
+.pc-container.pros{
+    background-image: linear-gradient(to top, #ddd, #bbb);
+}
+
+.pc-container.cons {
+    background-image: linear-gradient(to bottom, #ddd, #bbb);
+}
+
+
+/* Color Picker */
+
+.colorpicker {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* background-color: #aaa; */
+}
+
+.cdesc {
+    padding: 4em;
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+
+.cpick {
+  flex-grow: 1;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cpick img {
+    height: 10em;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #444;
+    display: flex;
+    height: 15em;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+}
+
+
+.vrule {
+    width: 0.2em;
+    background-color: white;
+    height: 10em;
+}
+
+.hrule {
+    display: none;
+}
+
+footer div {
+    margin: auto 0;
+}
+
+.ftitle, .moreinfo {
+    padding: 0 2em;
+    width: 60%;
+}
+
+.ftitle h1 {
+    font-size: 2.25em;
+    text-align: right;
+}
+
+.moreinfo h2 {
+    margin: 0;
+}
+
+
+/* Extra handelingen voor een mobiele weergave */
+@media screen and (max-width: 30em) {
+    footer {
+        /* height: 15em; */
+        height: unset;
+        flex-wrap: wrap;
+    }
+
+    .vrule {
+        display: none;
+    }
+
+    .ftitle h1 {
+        text-align: center;
+    }
+
+    .moreinfo {
+        text-align: center;
+    }
+    
+    .moreinfo {
+        padding-bottom: 2em;
+    }
+
+    .hrule {
+        display: block;
+        height: 0.2em;
+        background-color: white;
+        margin: 1em;        
+    }
+
+}
+
