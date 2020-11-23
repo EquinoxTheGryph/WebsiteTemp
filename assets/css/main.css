@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,500&display=swap");
 * {
   font-family: "Montserrat", sans-serif;
+}
+*:focus {
+  outline: dashed #4ad2ec 2px;
 }
 
 html, body {
@@ -9,6 +12,9 @@ html, body {
 
 nav {
   background-color: #EC644A;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 nav ul {
   display: -webkit-box;
@@ -19,11 +25,13 @@ nav ul {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 0;
+  margin-bottom: 0;
   padding: 0 1em;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 nav ul li a {
+  margin: 0.1em;
   padding: 1em;
   min-width: 5em;
   display: block;
@@ -33,5 +41,42 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #AAA;
+}
+
+header {
+  background-image: url("../../assets/img/jumprope.jpg");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 35em;
+}
+header .headerContainer {
+  width: 15em;
+}
+header h3 {
+  color: #EC644A;
+  font-weight: 400;
+  font-size: smaller;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.about .aboutHolder {
+  width: 50%;
+  min-width: 20em;
+  height: 35em;
 }
 /*# sourceMappingURL=main.css.map */

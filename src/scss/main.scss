@@ -2,7 +2,7 @@
 @use "sass:color";
 
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,500&display=swap');
 
 // Color variables
 $baseColor: #EC644A;
@@ -13,9 +13,17 @@ $hoverText: #AAA;
 // Font variables
 $font: 'Montserrat', sans-serif;
 
+// Other variables
+$sectionHeight: 35em;
+
+
 // Set default fonts
 * {
     font-family: $font;
+
+    &:focus {
+        outline: dashed color.complement($baseColor) 2px;
+    }
 }
 
 html, body {
@@ -24,17 +32,21 @@ html, body {
 
 nav {
     background-color: $baseColor;
+    position: sticky;
+    top: 0;
     
     ul {
         display: flex;
         list-style: none;
         justify-content: center;
         margin-top: 0;
+        margin-bottom: 0;
         padding: 0 1em;
         flex-wrap: wrap;
 
         li {
             a {
+                margin: 0.1em;
                 padding: 1em;
                 min-width: 5em;
                 display: block;
@@ -48,4 +60,36 @@ nav {
             }
         }
     }
+}
+
+header {
+    background-image: url("../../assets/img/jumprope.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: $sectionHeight;
+
+    .headerContainer {
+        width: 15em;
+    }
+
+    h3 {
+        color: $baseColor;
+        font-weight: 400;
+        font-size: smaller;
+    }
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+
+    .aboutHolder {
+        width: 50%;
+        min-width: 20em;
+        height: $sectionHeight;
+    }
+
 }
