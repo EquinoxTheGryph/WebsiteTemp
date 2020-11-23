@@ -1,0 +1,51 @@
+// Import additional libraries for colors
+@use "sass:color";
+
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100;1,500&display=swap');
+
+// Color variables
+$baseColor: #EC644A;
+$lightText: white;
+$darkText: black;
+$hoverText: #AAA;
+
+// Font variables
+$font: 'Montserrat', sans-serif;
+
+// Set default fonts
+* {
+    font-family: $font;
+}
+
+html, body {
+    margin: 0;
+}
+
+nav {
+    background-color: $baseColor;
+    
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        margin-top: 0;
+        padding: 0 1em;
+        flex-wrap: wrap;
+
+        li {
+            a {
+                padding: 1em;
+                min-width: 5em;
+                display: block;
+                height: auto;
+                color: $lightText;
+                text-decoration: none;
+
+                &:hover {
+                    color: $hoverText;
+                }
+            }
+        }
+    }
+}
