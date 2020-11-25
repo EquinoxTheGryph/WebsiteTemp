@@ -169,14 +169,19 @@ header {
             margin: 1em;
 
             .sbtn {
-                background-color: orange;
+                background-color: $baseColor;
                 margin: 0.3em;
                 padding: 0.4em;
                 border-radius: 100%;
 
                 &:hover {
-                    background-color: lighten($color: orange, $amount: 25%);
+                    background-color: lighten($color: $baseColor, $amount: 10%);
                 }
+
+                &:active {
+                    background-color: lighten($color: $baseColor, $amount: 25%);
+                }
+
             }
         }
     }

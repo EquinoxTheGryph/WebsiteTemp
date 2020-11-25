@@ -146,13 +146,16 @@ header h3 {
   margin: 1em;
 }
 .aboutContainer .imageSlider .btnHolder .sbtn {
-  background-color: orange;
+  background-color: #EC644A;
   margin: 0.3em;
   padding: 0.4em;
   border-radius: 100%;
 }
 .aboutContainer .imageSlider .btnHolder .sbtn:hover {
-  background-color: #ffd280;
+  background-color: #f18c78;
+}
+.aboutContainer .imageSlider .btnHolder .sbtn:active {
+  background-color: #f8c7bd;
 }
 
 .offerings {
