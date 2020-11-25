@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,500&display=swap");
-:root {
-  --opacity: 1;
-  --background: url("../img/gallery/image0.jpg");
-}
-
 * {
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
@@ -93,6 +88,8 @@ header h3 {
 .aboutContainer {
   -webkit-box-shadow: 0 0 2em black;
           box-shadow: 0 0 2em black;
+  --opacity: 1;
+  --background: url("../img/gallery/image0.jpg");
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
   grid-auto-rows: 1fr minmax(0, 30em);
@@ -190,5 +187,63 @@ header h3 {
 .offerings .offeringsHolder img {
   width: 10em;
   height: 10em;
+}
+
+.community .cTitle {
+  height: 20em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #EC644A;
+}
+.community .cTitle h2 {
+  color: white;
+}
+.community .cGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
+  grid-auto-rows: 1fr;
+}
+.community .cGrid .gridItem {
+  height: 15em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.community .cGrid .gridItem .social {
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+.community .cGrid .gridItem img {
+  max-width: 4em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  justify-self: flex-start;
+  margin: 1em;
+}
+.community .cGrid .gridItem:nth-child(odd) {
+  background-color: #E4E4E4;
+}
+.community .cGrid .gridItem:nth-child(even) {
+  background-color: #ECECEC;
 }
 /*# sourceMappingURL=main.css.map */
