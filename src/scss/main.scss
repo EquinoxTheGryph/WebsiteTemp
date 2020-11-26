@@ -19,6 +19,7 @@ $font: "Montserrat", sans-serif;
 // Other variables
 $sectionHeight: 25em;
 $navbarHeight: 3em;
+$squareHeight: 18em;
 
 // Mixins
 @mixin shadow {
@@ -199,8 +200,8 @@ header {
 
     .offeringsHolder {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
-        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax($squareHeight, 1fr));
+        grid-auto-rows: $squareHeight;
         align-items: center;
         text-align: center;
 
@@ -243,7 +244,7 @@ header {
     position: relative;
 
     .cTitle {
-        height: 20em;
+        height: $squareHeight;
 
         display: flex;
         align-items: center;
@@ -258,11 +259,11 @@ header {
 
     .cGrid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax($squareHeight, 1fr));
         grid-auto-rows: 1fr;
 
         .gridItem {
-            height: 15em;
+            height: $squareHeight;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
