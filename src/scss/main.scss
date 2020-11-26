@@ -263,28 +263,24 @@ header {
 
         .gridItem {
             height: 15em;
-            // display: flex; //
             display: grid;
-            // justify-content: space-between;//
-            // justify-content: center;
-            // align-items: center;//
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
 
             text-align: center;
-            // flex-direction: column;
 
             .vCenterText {
-                // height: 100%;
                 margin: 0 auto;
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
-                // align-content: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                grid-row: 2;
+                grid-column-start: 1;
+                grid-column-end: -1;
             }
 
             .socialmediaIconsHolder {
-                // padding: auto 0; 
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -293,7 +289,6 @@ header {
 
                 .socialmediaIcon {
                     height: 2em;
-                    // background-color: $baseColor;
                     border-radius: 100%;
                     padding: 0.4em;
                 }
