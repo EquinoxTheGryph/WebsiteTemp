@@ -108,6 +108,18 @@ nav {
             }
         }
     }
+
+    @media screen and (max-width: 30em) {
+        ul li a {
+            padding: 0.2em;
+            // display: block;
+        }
+        ul li {
+            width: 100%;
+            text-align: center;
+        }
+        
+    }
 }
 
 header {
