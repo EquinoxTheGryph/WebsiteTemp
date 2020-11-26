@@ -2,11 +2,11 @@
 @use "sass:color";
 
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,500&display=swap");
 
 // Color variables
-$baseColor: #EC644A;
-$sectionBG: #4A4A4A;
+$baseColor: #ec644a;
+$sectionBG: #4a4a4a;
 $lightText: white;
 $darkText: black;
 $hoverText: white;
@@ -14,7 +14,7 @@ $baseColorText: color.adjust($baseColor, $lightness: 25);
 $hColorText: color.adjust($sectionBG, $lightness: 40);
 
 // Font variables
-$font: 'Montserrat', sans-serif;
+$font: "Montserrat", sans-serif;
 
 // Other variables
 $sectionHeight: 25em;
@@ -23,8 +23,7 @@ $navbarHeight: 3em;
 // Mixins
 @mixin shadow {
     box-shadow: 0 0 2em black;
-} 
-
+}
 
 // Global
 * {
@@ -43,7 +42,8 @@ h2 {
     font-weight: 300;
 }
 
-html, body {
+html,
+body {
     margin: 0;
 }
 
@@ -52,7 +52,7 @@ html, body {
     color: $lightText;
     text-align: center;
     padding: 10%;
-    font-size: 0.90rem;
+    font-size: 0.9rem;
 }
 
 // :target::before {
@@ -71,7 +71,7 @@ nav {
     background-color: $baseColor;
     position: sticky;
     top: 0;
-    
+
     ul {
         display: flex;
         list-style: none;
@@ -88,9 +88,9 @@ nav {
                 color: $baseColorText;
                 text-decoration: none;
                 padding: 1em;
-                height: auto; 
+                height: auto;
                 display: block;
-                
+
                 &:hover {
                     color: $hoverText;
                 }
@@ -127,7 +127,7 @@ header {
 
     // Default Variables (Native CSS variables)
     --opacity: 1;
-    --background: url('../img/gallery/image0.jpg');
+    --background: url("../img/gallery/image0.jpg");
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
@@ -136,7 +136,7 @@ header {
 
     z-index: 800;
     position: relative;
-    
+
     .aboutHolder {
         max-height: $sectionHeight;
         z-index: -1;
@@ -185,7 +185,6 @@ header {
                 &:active {
                     background-color: lighten($color: $baseColor, $amount: 25%);
                 }
-
             }
         }
     }
@@ -204,8 +203,7 @@ header {
         grid-auto-rows: 1fr;
         align-items: center;
         text-align: center;
-        
-        
+
         .textSection {
             grid-column-start: 1;
             grid-column-end: 3;
@@ -223,11 +221,11 @@ header {
             }
 
             &:nth-child(odd) {
-                background-color: #E4E4E4;
+                background-color: #e4e4e4;
             }
 
             &:nth-child(even) {
-                background-color: #ECECEC;
+                background-color: #ececec;
             }
         }
 
@@ -246,7 +244,7 @@ header {
 
     .cTitle {
         height: 20em;
-        
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -265,32 +263,77 @@ header {
 
         .gridItem {
             height: 15em;
-            display: flex;
-            // justify-content: space-between;
-            justify-content: center;
-            align-items: center;
+            // display: flex; //
+            display: grid;
+            // justify-content: space-between;//
+            // justify-content: center;
+            // align-items: center;//
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
             text-align: center;
-            flex-direction: column;
+            // flex-direction: column;
 
-            .social {
-                justify-content: space-between !important;
-            }            // ! FIXME! (Doesnt space between)
+            .vCenterText {
+                // height: 100%;
+                margin: 0 auto;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-content: center;
+            }
 
-            img {
+            .socialmediaIconsHolder {
+                // padding: auto 0; 
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                grid-row: 2;
+                grid-column: 2;
+
+                .socialmediaIcon {
+                    height: 2em;
+                    // background-color: $baseColor;
+                    border-radius: 100%;
+                    padding: 0.4em;
+                }
+            }
+
+            img.smallicon {
                 max-width: 4em;
                 align-self: flex-start;
                 justify-self: flex-start;
                 margin: 1em;
             }
+        }
 
-            &:nth-child(odd) {
-                background-color: #E4E4E4;
+        .connect {
+            background-color: #b1b2b4;
+        }
+
+        .bodytoburn {
+            background-color: #363636;
+
+            .socialMediaIcon {
+                background-color: #EC644A;
             }
+        }
 
-            &:nth-child(even) {
-                background-color: #ECECEC;
+        .crossfit {
+            background-color: #232323;
+
+            .socialMediaIcon {
+                background-color: #DE6E5D;
+            }
+        }
+
+        .hiit {
+            background-color: #ffd802;
+
+            .socialMediaIcon {
+                background-color: color.invert(#1D1D1D);
+                filter: invert(100%);
             }
         }
     }
 }
-
