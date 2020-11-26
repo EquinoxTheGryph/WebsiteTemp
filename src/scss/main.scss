@@ -108,6 +108,8 @@ header {
     align-items: center;
     text-align: center;
     height: $sectionHeight;
+    z-index: 900;
+    position: relative;
 
     .headerContainer {
         width: 15em;
@@ -123,7 +125,7 @@ header {
 .aboutContainer {
     @include shadow();
 
-// Default Variables (Native CSS variables)
+    // Default Variables (Native CSS variables)
     --opacity: 1;
     --background: url('../img/gallery/image0.jpg');
 
@@ -131,6 +133,9 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
     grid-auto-rows: 1fr minmax(0, 30em);
     overflow: hidden;
+
+    z-index: 800;
+    position: relative;
     
     .aboutHolder {
         max-height: $sectionHeight;
@@ -187,7 +192,11 @@ header {
 }
 
 .offerings {
+    @include shadow();
     background: url("../img/concrete.jpg") no-repeat center/cover;
+
+    z-index: 700;
+    position: relative;
 
     .offeringsHolder {
         display: grid;
@@ -230,6 +239,11 @@ header {
 }
 
 .community {
+    @include shadow();
+
+    z-index: 600;
+    position: relative;
+
     .cTitle {
         height: 20em;
         
@@ -260,7 +274,7 @@ header {
 
             .social {
                 justify-content: space-between !important;
-            }            
+            }            // ! FIXME! (Doesnt space between)
 
             img {
                 max-width: 4em;
